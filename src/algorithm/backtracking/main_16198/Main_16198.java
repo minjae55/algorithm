@@ -1,4 +1,4 @@
-package baekjoon.backtracking.main_16198;
+package algorithm.backtracking.main_16198;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -14,7 +14,6 @@ public class Main_16198 {
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        //키보드 입력을 한 줄 단위로 빠르게 읽음
         List<Integer> arr = new ArrayList<>();
 
         int q = Integer.parseInt(br.readLine()); // 갯수
@@ -23,6 +22,7 @@ public class Main_16198 {
         for (int i = 0; i < q; i++) {
             arr.add(Integer.parseInt(st.nextToken()));
         }
+
         getResult(arr, 0);
         System.out.println(result);
     }
@@ -36,9 +36,8 @@ public class Main_16198 {
         for (int i = 1; i < arr.size() - 1; i++) {
 
             int currentResult = arr.get(i - 1) * arr.get(i + 1);
-
             int removed = arr.get(i);
-            arr.remove(i);
+            arr.remove(i); //개선
 
             getResult(arr, (sum + currentResult));
 

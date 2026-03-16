@@ -1,4 +1,4 @@
-package baekjoon.recursion;
+package algorithm.recursion;
 
 public class Recursion_2 {
 

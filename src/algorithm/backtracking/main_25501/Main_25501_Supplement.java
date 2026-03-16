@@ -1,4 +1,4 @@
-package baekjoon.backtracking.main_25501;
+package algorithm.backtracking.main_25501;
 
 import java.util.Scanner;
 
